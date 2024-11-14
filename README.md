@@ -6,7 +6,7 @@ API RESTful que permite acessar a lista de indicados e vencedores da categoria *
 ## Requisito do sistema:
 
   1. **Ler o arquivo CSV dos filmes e inserir os dados em uma base de dados ao iniciar a aplicação.**
-      - Ao iniciar a aplicação é realizada a leitura do arquivo CSV dos filmes e inserção dos registros correspondentes na base de dados. 
+      - Ao iniciar a aplicação é realizada a leitura do arquivo CSV dos filmes e inserção dos registros na base de dados. 
       - A configuração de propriedades de acesso ao banco de dados como `url`, `username` e `password` estão especificadas no arquivo de configuração `application.properties`.
       - O **Web Console do H2 Database** é um mecanismo que facilita a verificação do conjunto de dados carregados na inicialização do web service, conforme informações contidas no tópico: [Web Console do H2 Database](#web-console-do-h2-database).
       - Foi disponiblizado também o **Swagger UI** que além de permitir a visualização dos endpoints da API e sua descrição, permite realizar chamadas para esses endpoints diretamente a partir da interface do navegador. As informações de acesso a essa ferramenta estão disponíveis no tópico: [Swagger UI](#swagger-ui).
@@ -15,7 +15,7 @@ API RESTful que permite acessar a lista de indicados e vencedores da categoria *
 
 
   1. **Obter o produtor com maior intervalo entre dois prêmios consecutivos, e o que obteve dois prêmios mais rápido, seguindo a especificação de formato definida na página 2;**
-      - A implementação do endpoint `/movie/producer-awards` atende ao requisito de identificar o produtor com o maior intervalo entre dois prêmios consecutivos e o que conquistou dois prêmios no menor intervalo. Esse endpoint foi desenvolvido para retornar os dados no formato especificado, conforme orientações definidas na página 2 das especificações.
+      - A implementação do endpoint `/movie/producer-awards` atende ao requisito de identificar o produtor com o maior intervalo entre dois prêmios consecutivos e o que conquistou dois prêmios no menor intervalo.
       - Neste documento, está incluso um [Estudo de Caso](#estudo-de-caso) que demonstra com mais detalhes o resultado obtido a partir do consumo deste endpoint.
 
 
@@ -277,7 +277,7 @@ Segue o endereço das imagens disponiblizadas:
   - [ghcr.io/alonsodecarli/razzies-app:latest](ghcr.io/alonsodecarli/razzies-app:latest)
   - [ghcr.io/alonsodecarli/razzies-app:v1](ghcr.io/alonsodecarli/razzies-app:v1)
 
-Segue o endereço da imagem gerada para rodar na **arquitetura ARM**:
+Segue o endereço das imagens geradas para rodar na **arquitetura ARM**:
   - [ghcr.io/alonsodecarli/razzies-app-arm:latest](ghcr.io/alonsodecarli/razzies-app-arm:latest)
   - [ghcr.io/alonsodecarli/razzies-app-arm:v1](ghcr.io/alonsodecarli/razzies-app-arm:v1)
 
