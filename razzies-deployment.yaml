@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: razzies-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: razzies-app
+  template:
+    metadata:
+      labels:
+        app: razzies-app
+    spec:
+      containers:
+        - name: razzies-app
+          image: ghcr.io/alonsodecarli/razzies-app-teste:latest
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: ocirsecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: razzies-app-service
+spec:
+  selector:
+    app: razzies-app
+  ports:
+    - protocol: TCP
+      port: 80   # Porta exposta pelo serviço Kubernetes
+      targetPort: 8080  # Porta do container do app
+  type: LoadBalancer  # Tipo de serviço
