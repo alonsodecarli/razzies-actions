@@ -6,7 +6,7 @@ API RESTful que permite acessar a lista de indicados e vencedores da categoria *
 ## Requisito do sistema:
 
   1. **Ler o arquivo CSV dos filmes e inserir os dados em uma base de dados ao iniciar a aplicação.**
-      - Ao iniciar a aplicação o padrão de projeto **Command Line Runner** do Spring Boot a aplicação realizada a leitura do arquivo CSV dos filmes e faz a inserção dos registros na base de dados. 
+      - Ao iniciar a aplicação realiza a leitura do arquivo CSV dos filmes e faz a inserção dos registros na base de dados. 
       - A configuração de propriedades de acesso ao banco de dados como `url`, `username` e `password` estão especificadas no arquivo de configuração `application.properties`.
       - O **Web Console do H2 Database** é um mecanismo que facilita a verificação do conjunto de dados carregados na inicialização do web service, conforme informações contidas no tópico: [Web Console do H2 Database](#web-console-do-h2-database).
       - Foi disponiblizado também o **Swagger UI** que além de permitir a visualização dos endpoints da API e sua descrição, permite realizar chamadas para esses endpoints diretamente a partir da interface do navegador. As informações de acesso a essa ferramenta estão disponíveis no tópico: [Swagger UI](#swagger-ui).
