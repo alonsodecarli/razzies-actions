@@ -38,7 +38,7 @@ API RESTful que permite acessar a lista de indicados e vencedores da categoria *
 
   4. **A aplicação deve conter um readme com instruções para rodar o projeto e os testes de integração.**
       - Recurso disponibilizado no arquivo `README.md` incluso no diretório raiz do projeto.
-      - O arquivo arquivo `README.md` pode ser visualizado também acessando o repositório: [https://github.com/alonsodecarli/razzies.git](https://github.com/alonsodecarli/razzies.git).
+      - O arquivo `README.md` pode ser visualizado também acessando o repositório: [https://github.com/alonsodecarli/razzies.git](https://github.com/alonsodecarli/razzies.git).
       - As instruções de como rodar o projeto e os testes de integração estão disponíveis utilizando: 
         - [Maven](#maven) para construção, execução e testes do projeto;
         - [Docker](#docker);
@@ -53,7 +53,7 @@ API RESTful que permite acessar a lista de indicados e vencedores da categoria *
   - A configuração da base de dados pode é configurada por padrão na propriedade `csv.filepath` disponibilizada no arquivo de configuração `application.properties`.
   - O arquivo `movielist.csv` está localizado no caminho `resources/csv` do projeto.
   - Pode ser informado para a aplicação um arquivo CSV disponibilizado na pasta `resources/csv` ou em qualquer lugar do computador da seguinte forma:
-    1. **Configurando o `application.properties`**: alterar o valor da propriedade propriedade `csv.filepath`;
+    1. **Configurando o `application.properties`**: alterar o valor da propriedade `csv.filepath`;
     2. **Definindo a variável de ambiente para o Maven**: 
       ```
           # exemplo de execução carregando um arquivo localizado na pasta resources do projeto (caminho relativo)
