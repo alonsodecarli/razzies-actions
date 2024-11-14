@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: razzies-app
-          image: ghcr.io/alonsodecarli/razzies-app-teste:latest
+          image: ghcr.io/alonsodecarli/razzies-app:latest
           ports:
             - containerPort: 8080
       imagePullSecrets:
