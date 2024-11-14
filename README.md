@@ -273,12 +273,11 @@ Esses comandos permitem que você construa, execute e gerencie a imagem Docker d
 As imagens do projeto **RAZZIES** encontram-se disponíveis no **GitHub Container Registry**, onde você pode acessar e gerenciar as imagens Docker geradas. 
 Uma forma prática de armazenar, versionar e distribuir imagens Docker de maneira segura e eficiente.
 
-Você pode acessar o repositório e visualizar as imagens diretamente no link:
-
+Segue o link dasas imagens:
   - [ghcr.io/alonsodecarli/razzies-app:latest](ghcr.io/alonsodecarli/razzies-app:latest)
   - [ghcr.io/alonsodecarli/razzies-app:v1](ghcr.io/alonsodecarli/razzies-app:v1)
 
-Segue o link para o imagem da aplicação gerada para rodar na **arquitetura ARM**:
+Segue o link da imagem gerada para rodar na **arquitetura ARM**:
   - [ghcr.io/alonsodecarli/razzies-app-arm:latest](ghcr.io/alonsodecarli/razzies-app-arm:latest)
 
 
