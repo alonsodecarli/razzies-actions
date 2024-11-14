@@ -275,10 +275,11 @@ Uma forma prática de armazenar, versionar e distribuir imagens Docker de maneir
 
 Você pode acessar o repositório e visualizar as imagens diretamente no link:
 
-  - [https://github.com/alonsodecarli/razzies](https://github.com/alonsodecarli/razzies)
+  - [ghcr.io/alonsodecarli/razzies-app:latest](ghcr.io/alonsodecarli/razzies-app:latest)
+  - [ghcr.io/alonsodecarli/razzies-app:v1](ghcr.io/alonsodecarli/razzies-app:v1)
 
 Segue o link para o imagem da aplicação gerada para rodar na **arquitetura ARM**:
-  - [https://github.com/alonsodecarli/razzies-arm](https://github.com/alonsodecarli/razzies-arm)
+  - [ghcr.io/alonsodecarli/razzies-app-arm:latest](ghcr.io/alonsodecarli/razzies-app-arm:latest)
 
 
 
