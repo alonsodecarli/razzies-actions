@@ -1,0 +1,70 @@
+name: API RAZZIES ACTIONS - CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      # Configurar o JDK (Java 21)
+      - name: Configurar JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      # Construir e testar o projeto com Maven
+      - name: Construir e testar com Maven
+        run: mvn clean install
+
+      # Instalar Docker
+      - name: Configurar Docker
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker.io
+
+      # Construir a imagem Docker
+      - name: Build Docker image
+        run: |
+          docker build -t razzies-action-app .
+
+      # Tag Docker image com "latest"
+      - name: Tag Docker image with "latest"
+        run: |
+          docker tag razzies-action-app ghcr.io/alonsodecarli/razzies-action-app:latest
+
+      # Tag Docker image com versão incremental
+      - name: Tag Docker image with incremented version
+        run: |
+          VERSION_FILE="version.txt"
+          if [ ! -f $VERSION_FILE ]; then
+            echo "1" > $VERSION_FILE
+          fi
+          VERSION=$(cat $VERSION_FILE)
+          NEXT_VERSION=$((VERSION + 1))
+          echo $NEXT_VERSION > $VERSION_FILE
+          docker tag razzies-action-app ghcr.io/alonsodecarli/razzies-action-app:v${NEXT_VERSION}
+
+      # Login no GitHub Container Registry
+      - name: Login no GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # Fazer push das imagens Docker
+      - name: Push Docker images to GHCR
+        run: |
+          docker push ghcr.io/alonsodecarli/razzies-action-app:latest
+          docker push ghcr.io/alonsodecarli/razzies-action-app:v${NEXT_VERSION}
