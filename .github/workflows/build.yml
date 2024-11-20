@@ -12,6 +12,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read   # Necessário para acessar o código
+      packages: write  # Necessário para publicar pacotes (imagens Docker)
+      id-token: write  # Necessário para acessar o GitHub Container Registry (GHCR)
+
     steps:
       # Checkout do código
       - name: Checkout do código
