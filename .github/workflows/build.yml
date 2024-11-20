@@ -56,10 +56,11 @@ jobs:
           echo $NEXT_VERSION > $VERSION_FILE
           docker tag razzies-action-app ghcr.io/alonsodecarli/razzies-action-app:v${NEXT_VERSION}
 
-      # Login no GitHub Container Registry
+      # Login no GitHub Container Registry (GHCR)
       - name: Login no GitHub Container Registry
         uses: docker/login-action@v2
         with:
+          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
